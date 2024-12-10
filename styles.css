@@ -1,0 +1,265 @@
+body {
+  font-family: "Work sans", sans-serif;
+  margin: 0px;
+
+  h1,
+  h2 {
+    font-family: "Amatic SC", sans-serif;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 10px;
+  }
+  h2 {
+    margin: 0px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(/photos/premiereMaquette/lyon.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-left: 25%;
+      padding-right: 25%;
+      nav {
+        ul {
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 6px;
+          li {
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      width: 100%;
+      text-align: center;
+      margin-top: 3.5em;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 1.5em;
+    }
+
+    section#intro {
+      margin-top: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: calc(100% - 6em);
+      }
+      h2 {
+        margin: 1em;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          width: calc(100% - 2em);
+          margin: 0px;
+        }
+      }
+    }
+
+    section#platsCelebres {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1.5em;
+      }
+      article {
+        width: calc(100% - 10em);
+        border: 1px solid lightgray;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgb(243, 243, 243);
+        img,
+        p {
+          width: calc(100% - 2em);
+          margin-bottom: 2em;
+          margin-top: 0px;
+        }
+      }
+    }
+
+    section#lesMeilleursRestaurants {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1.5em;
+      }
+      article {
+        width: calc(100% - 7em);
+        img,
+        p {
+          width: calc(100% - 1em);
+          margin-top: 0px;
+        }
+
+        img {
+          height: 290px;
+          object-fit: cover;
+          object-position: center;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 1.5em;
+    width: 100%;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 20px;
+    }
+    a,
+    p,
+    adress {
+      font-size: 10px;
+      color: white;
+      text-decoration: none;
+      font-style: normal;
+    }
+
+    div#footerTop {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      nav {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          li {
+            display: inline;
+          }
+        }
+      }
+    }
+    div#footerBottom {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: rgb(31, 31, 31);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    main {
+      article {
+        justify-content: space-around;
+      }
+
+      section#intro {
+        flex-direction: row;
+        padding-left: 4%;
+        max-width: 92%;
+
+        img {
+          width: 20%;
+        }
+        div {
+          align-items: flex-start;
+          h2 {
+            margin-left: 2em;
+          }
+          p {
+            text-align: left;
+            margin-left: 3em;
+          }
+        }
+      }
+
+      section#platsCelebres {
+        #articleDiv {
+          flex-direction: row;
+          justify-content: space-around;
+
+          article {
+            width: calc(100% / 3 - 7em);
+            height: 600px;
+
+            img {
+              width: 300px;
+              max-width: 100%;
+              height: 300px;
+              max-height: 100%;
+              object-fit: fill;
+              object-fit: cover;
+              object-position: center;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+
+      section#lesMeilleursRestaurants {
+        div {
+          display: flex;
+          margin: 3em;
+          img {
+            height: 290px;
+            width: 290px;
+            object-fit: cover;
+            object-position: center;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
